@@ -8,5 +8,5 @@ Find.find("../#{$source}/") {|path|
   targets << target
   print "rm -f #{target}.geojson\n"
   print "ogr2ogr -f GeoJSON #{target}.geojson #{path}\n"
-  print "../tippecanoe/tippecanoe --maximum-zoom=8 -f -o #{target}.mbtiles -n #{target} -l #{target} #{target}.geojson\n"
+  print "../tippecanoe/tippecanoe -Bg --maximum-zoom=8 -f -o #{target}.mbtiles -n #{target} -l #{target} #{target}.geojson\n"
 }
